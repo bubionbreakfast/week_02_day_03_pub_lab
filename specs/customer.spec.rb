@@ -21,5 +21,31 @@ end
 #   assert_equal(8, balance_of_wallet.buy_drink())
 # end
 
+# def test_can_afford_buy_drink__true()
+#   customer = Customer.new("Jane", 10)
+#   drink = Drink.new("Beer", 2)
+#   assert_equal(true, customer.test_can_afford_buy_drink())
+# end
+
+def test_can_afford_buy_drink__true()
+  customer = Customer.new("Jane", 10)
+  drink = Drink.new("Beer", 2)
+  assert_equal(true, customer.can_afford_buy_drink(drink))
+end
+
+def test_can_afford_buy_drink__true__exact_price()
+  customer = Customer.new("Jane", 2)
+  drink = Drink.new("Beer", 2)
+  assert_equal(true, customer.can_afford_buy_drink(drink))
+end
+
+def test_can_afford_buy_drink__false()
+  customer = Customer.new("Jane", 1)
+  drink = Drink.new("Beer", 2)
+  assert_equal(false, customer.can_afford_buy_drink(drink))
+end
+
+
+
 
 end

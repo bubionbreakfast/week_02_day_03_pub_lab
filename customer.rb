@@ -9,5 +9,9 @@ def initialize(name, wallet)
 end
 
 
+def can_afford_buy_drink(drink)
+  @wallet >= drink.price()
+end
+
 
 end
