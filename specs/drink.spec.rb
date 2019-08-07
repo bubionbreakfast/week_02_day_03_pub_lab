@@ -7,12 +7,12 @@ require_relative('../drink')
 class TestDrink < MiniTest::Test
 
 def test_drink_name()
-  drink_name = Drink.new("Beer", 2)
+  drink_name = Drink.new("Beer", 2, 6.4)
   assert_equal("Beer", drink_name.name())
 end
 
 def test_drink_price()
-  drink_price = Drink.new("Wine", 3)
+  drink_price = Drink.new("Wine", 3, 15)
   assert_equal(3, drink_price.price())
 end
 
