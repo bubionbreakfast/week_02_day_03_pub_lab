@@ -45,7 +45,18 @@ def test_can_afford_buy_drink__false()
   assert_equal(false, customer.can_afford_buy_drink(drink))
 end
 
+def test_buy_drink()
+  customer = Customer.new("Jane", 10)
+  drink = Drink.new("Wine", 3)
+  assert_equal(7, customer.buy_drink(drink))
+end
 
+def test_can_sell_drink()
+  customer = Customer.new("Jane", 10)
+  drink = Drink.new("Wine", 3)
+  pub = Pub.new("Bobs", 10, [@drink1, @drink2, @drink3])
+  assert_equal(13, pub.sell_drink(drink))
+end
 
 
 end

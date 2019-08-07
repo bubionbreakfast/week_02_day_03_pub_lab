@@ -13,5 +13,12 @@ def can_afford_buy_drink(drink)
   @wallet >= drink.price()
 end
 
+def buy_drink(drink)
+  @wallet -= drink.price
+end
+
+def sell_drink(drink)
+  @till += drink.price()
+end
 
 end
