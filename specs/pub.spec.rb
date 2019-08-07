@@ -11,6 +11,7 @@ def setup()
   @drink2 = Drink.new("Wine", 3)
   @drink3 = Drink.new("Spirits", 4)
   @pub = Pub.new("Bobs", 10, [@drink1, @drink2, @drink3])
+  @customer = Customer.new("Sally", 5)
 end
 
 def test_get_pub_name()
