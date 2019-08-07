@@ -17,4 +17,12 @@ def test_get_pub_name()
   assert_equal("Bobs", @pub.name())
 end
 
+def test_get_till_amount()
+  assert_equal(10, @pub.till_amount())
+end
+
+def test_get_number_of_drinks()
+  assert_equal(3, @pub.number_of_drinks())
+end
+
 end
